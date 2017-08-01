@@ -1,15 +1,13 @@
 exports.run = async (client, msg, [user, role]) => {
-  console.log(args);
-  console.log(args[1]);
-  if (msg.guild.roles.exists('name', `${args[0]}`)) {
-        msg.mentions.members.first().addRole(msg.guild.roles.find('name', `${args[1]}`));
+  if (msg.guild.roles.exists('name', role)) {
+        msg.mentions.members.first().addRole(msg.guild.roles.find('name', role));
         msg.reply('', {embed: {
             color: 3447003,
             author: {
             name: client.user.username,
             icon_url: client.user.avatarURL
             },
-            description: `${msg.mentions.members.first().user.username} has been given the ${args[1]} role. :smiley:`,
+            description: `${user} has been given the ${role} role. :smiley:`,
             timestamp: new Date(),
             footer: {
             icon_url: client.user.avatarURL,
@@ -24,7 +22,7 @@ exports.run = async (client, msg, [user, role]) => {
             name: client.user.username,
             icon_url: client.user.avatarURL
             },
-            description: `I am sorry but ${args[1]} role does not exist. :cry:`,
+            description: `I am sorry but ${role} role does not exist. :cry:`,
             timestamp: new Date(),
             footer: {
             icon_url: client.user.avatarURL,
