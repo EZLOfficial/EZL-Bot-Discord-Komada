@@ -1,0 +1,30 @@
+{
+  "name": "ezlbot",
+  "version": "1.0.0",
+  "description": "EZLBot a multi-purpose bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skillz4Killz/EZLBot.git"
+  },
+  "keywords": [
+    "EZLBot",
+    "discord",
+    "EZL",
+    "Esports",
+    "bot",
+    "Skillz4Killz"
+  ],
+  "author": "Skillz4Killz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Skillz4Killz/EZLBot/issues"
+  },
+  "homepage": "https://github.com/Skillz4Killz/EZLBot#readme",
+  "dependencies": {
+    "komada": "github:dirigeants/komada#indev"
+  }
+}

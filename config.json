@@ -1,0 +1,12 @@
+{
+    "botToken": "Mjg5OTIxNzIzNDM0OTI2MDgx.DGH4fQ.02tdfmHqmlZEdrlT4CoVGYlv-xA",
+    "botSettings": {
+	    "ownerID": "130136895395987456",
+	    "clientID": "289921723434926081",
+	    "prefix": ",",
+	    "passes": 4,
+	    "clientOptions": {
+	        "fetchAllMembers": true
+	    }
+    }
+}
