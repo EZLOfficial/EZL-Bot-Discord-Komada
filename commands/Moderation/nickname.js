@@ -1,27 +1,32 @@
 exports.run = async (client, msg, [user, name]) => {
-	//checks to see if the nickname is too long or too short for the discord requirement if so replies and then exits.
-  if (name.length > 32 || name.length == 0) {
-    msg.reply('Sorry the nickname was too long or too short.');
-    return
-  }
+	try {
+//checks to see if the nickname is too long or too short for the discord requirement if so replies and then exits.
+	  if (name.length > 32 || name.length == 0) {
+	    msg.reply('Sorry the nickname was too long or too short.');
+	    return
+	  }
 //set the nickname
-    msg.mentions.members.first().setNickname(`${name}`);
+	    msg.mentions.members.first().setNickname(`${name}`);
 //send a message in regards to what changed in an embed.
-    msg.reply('', {embed: {
-        color: 3447003,
-        author: {
-        name: client.user.username,
-        icon_url: client.user.avatarURL
-        },
-        title: 'Nickname has been changed!',
-        url: 'http://ezlgg.com',
-        description: `Nickname has been changed to ${name} for ${user} :smiley:`,
-        timestamp: new Date(),
-        footer: {
-	        icon_url: client.user.avatarURL,
-	        text: '© Esports Zodiac League LLC (EZL)'
-        }
-    }});
+	    msg.reply('', {embed: {
+	        color: 3447003,
+	        author: {
+	        name: client.user.username,
+	        icon_url: client.user.avatarURL
+	        },
+	        title: 'Nickname has been changed!',
+	        url: 'http://ezlgg.com',
+	        description: `Nickname has been changed to ${name} for ${user} :smiley:`,
+	        timestamp: new Date(),
+	        footer: {
+		        icon_url: client.user.avatarURL,
+		        text: '© Esports Zodiac League LLC (EZL)'
+	        }
+	    }});
+    } catch (e) {
+    	msg.reply('Some error occured with un-muting the member. A report has been sent to the developers.');
+    client.channels.get("341020497309597696").send(`There was an error trying to un-mute: ${e} in ${msg.channel} on ${msg.guild} by ${msg.author}`);
+    }
 };
 
 exports.conf = {

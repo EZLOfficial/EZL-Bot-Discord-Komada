@@ -1,21 +1,26 @@
 exports.run = async (client, msg, [user]) => {
-  msg.mentions.members.first().addRole(msg.guild.roles.find('name','Time-Out'));
-  msg.reply('', {embed: {
-      color: 3447003,
-      author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
-      },
-      title: 'Time-Out Initiated!',
-      url: 'http://ezlgg.com',
-      description: `${user} is now in the time-out corner. :smiley:`,
-      timestamp: new Date(),
-      footer: {
-      icon_url: client.user.avatarURL,
-      text: '© Esports Zodiac League LLC (EZL)'
+  try {
+    await msg.mentions.members.first().addRole(msg.guild.roles.find('name','Time-Out'));
+    msg.reply('', {embed: {
+        color: 3447003,
+        author: {
+        name: client.user.username,
+        icon_url: client.user.avatarURL
+        },
+        title: 'Time-Out Initiated!',
+        url: 'http://ezlgg.com',
+        description: `${user} is now in the time-out corner. :smiley:`,
+        timestamp: new Date(),
+        footer: {
+        icon_url: client.user.avatarURL,
+        text: '© Esports Zodiac League LLC (EZL)'
+        }
       }
-    }
-  });
+    });
+  } catch (e) {
+    msg.reply('Some error occured with muting the member. A report has been sent to the developers.');
+    client.channels.get("341020497309597696").send(`There was an error trying to mute: ${e} in ${msg.channel} on ${msg.guild} by ${msg.author}`);
+  }
 };
 
 exports.conf = {

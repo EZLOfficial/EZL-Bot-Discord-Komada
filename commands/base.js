@@ -1,5 +1,10 @@
 exports.run = async (client, msg, [...args]) => {
-  // Place Code Here
+  try {
+
+  } catch (e) {
+    msg.reply('Some error occured with xxxxxx. A report has been sent to the developers.');
+    client.channels.get("341020497309597696").send(`There was an error trying to xxxxxx: ${e} in ${msg.channel} on ${msg.guild} by ${msg.author}`);
+  }
 };
 
 exports.conf = {

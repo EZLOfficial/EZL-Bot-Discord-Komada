@@ -1,37 +1,41 @@
 exports.run = async (client, msg, [user, role]) => {
-  if (msg.guild.roles.exists('name', role)) {
-        msg.mentions.members.first().addRole(msg.guild.roles.find('name', role));
-        msg.reply('', {embed: {
-            color: 3447003,
-            author: {
-            name: client.user.username,
-            icon_url: client.user.avatarURL
-            },
-            description: `${user} has been given the ${role} role. :smiley:`,
-            timestamp: new Date(),
-            footer: {
-            icon_url: client.user.avatarURL,
-            text: '© Esports Zodiac League LLC (EZL)'
-            }
+  try {
+    if (msg.guild.roles.exists('name', role)) {
+      msg.mentions.members.first().addRole(msg.guild.roles.find('name', role));
+      msg.reply('', {embed: {
+        color: 3447003,
+        author: {
+          name: client.user.username,
+          icon_url: client.user.avatarURL
+        },
+        description: `${user} has been given the ${role} role. :smiley:`,
+        timestamp: new Date(),
+        footer: {
+          icon_url: client.user.avatarURL,
+          text: '© Esports Zodiac League LLC (EZL)'
         }
-        });
+      }
+      });
     } else {
-        msg.reply('', {embed: {
-            color: 3447003,
-            author: {
-            name: client.user.username,
-            icon_url: client.user.avatarURL
-            },
-            description: `I am sorry but ${role} role does not exist. :cry:`,
-            timestamp: new Date(),
-            footer: {
-            icon_url: client.user.avatarURL,
-            text: '© Esports Zodiac League LLC (EZL)'
-            }
+      msg.reply('', {embed: {
+        color: 3447003,
+        author: {
+          name: client.user.username,
+          icon_url: client.user.avatarURL
+        },
+        description: `I am sorry but ${role} role does not exist. :cry:`,
+        timestamp: new Date(),
+        footer: {
+          icon_url: client.user.avatarURL,
+          text: '© Esports Zodiac League LLC (EZL)'
         }
-        });
-    }
-};
+      }});
+    } 
+  } catch (e) {
+    msg.reply('Some error occured with adding a role to the member. A report has been sent to the developers.');
+    client.channels.get("341020497309597696").send(`There was an error trying to add a role: ${e} in ${msg.channel} on ${msg.guild} by ${msg.author}`);
+  }
+}
 
 exports.conf = {
   enabled: true,
