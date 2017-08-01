@@ -1,5 +1,7 @@
-exports.run = async (client, msg, args) => {
-  if (msg.guild.roles.exists('name', `${args[1]}`)) {
+exports.run = async (client, msg, [user, role]) => {
+  console.log(args);
+  console.log(args[1]);
+  if (msg.guild.roles.exists('name', `${args[0]}`)) {
         msg.mentions.members.first().addRole(msg.guild.roles.find('name', `${args[1]}`));
         msg.reply('', {embed: {
             color: 3447003,
@@ -45,8 +47,8 @@ exports.conf = {
 
 exports.help = {
   name: "addrole",
-  description: "Does someone need a role? Give them the necessary roles",
-  usage: "addrole @user RoleName",
-  usageDelim: "",
-  extendedHelp: "",
+  description: "Assign a role to another user.",
+  usage: "<user:user> <role:str>",
+  usageDelim: " ",
+  extendedHelp: "1) User must have a role called Moderators to use this command.\.2) Bot must have Manage Role permissions. The bot will not be able to assign a role higher than its highest role.",
 };
