@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/Skillz4Killz/EZLBot#readme",
   "dependencies": {
+    "fast-levenshtein": "^2.0.6",
     "komada": "github:dirigeants/komada#indev"
   }
 }
