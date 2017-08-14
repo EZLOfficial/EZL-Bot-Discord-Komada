@@ -1,1 +1,9 @@
-{"prefix":{"type":"String","default":",","array":false,"sql":"TEXT NOT NULL DEFAULT ','"},"modRole":{"type":"Role","default":null,"array":false,"sql":"TEXT"},"adminRole":{"type":"Role","default":null,"array":false,"sql":"TEXT"},"disabledCommands":{"type":"Command","default":[],"array":true,"sql":"TEXT DEFAULT '[]'"},"deleteCommand":{"type":"Boolean","default":null,"array":false}}
+{
+  "prefix":{"type":"String","default":",","array":false,"sql":"TEXT NOT NULL DEFAULT ','"},
+  "modRole":{"type":"Role","default":null,"array":false,"sql":"TEXT"},
+  "adminRole":{"type":"Role","default":null,"array":false,"sql":"TEXT"},
+  "disabledCommands":{"type":"Command","default":[],"array":true,"sql":"TEXT DEFAULT '[]'"},
+  "deleteCommand":{"type":"Boolean","default":null,"array":false},
+  "titleURL":{"type":"String","default":"https://discord.gg/6sHpmBj","array":false,"sql":"TEXT"},
+  "reportChannelId":{"type":"String","default":"292168218385055744","array":false,"sql":"TEXT"}
+}

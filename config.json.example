@@ -1,8 +1,8 @@
 {
-    "botToken": "",
+    "botToken": "BOT TOKEN HERE",
     "botSettings": {
-	    "ownerID": "130136895395987456",
-	    "clientID": "289921723434926081",
+	    "ownerID": "YOUR ID HERE",
+	    "clientID": "BOT ID HERE",
 	    "prefix": ",",
 	    "passes": 4,
 	    "clientOptions": {

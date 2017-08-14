@@ -25,7 +25,12 @@
   },
   "homepage": "https://github.com/Skillz4Killz/EZLBot#readme",
   "dependencies": {
+    "fast-html-parser": "^1.0.1",
     "fast-levenshtein": "^2.0.6",
-    "komada": "github:dirigeants/komada#indev"
+    "figlet": "^1.2.0",
+    "komada": "github:dirigeants/komada#indev",
+    "moment": "^2.18.1",
+    "moment-duration-format": "^1.3.0",
+    "snekfetch": "^3.2.9"
   }
 }

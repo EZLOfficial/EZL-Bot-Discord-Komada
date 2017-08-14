@@ -1,2 +1,5 @@
 node_modules/
-config.json
+commands/EZL
+commands/VGPRO
+config/
+bwd/provider/

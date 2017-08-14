@@ -1,5 +1,5 @@
 const Komada = require('komada');
-const config = require('./config');
+const config = require('./config/config');
 
 const client = new Komada.Client(config.botSettings);
 
