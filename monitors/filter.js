@@ -8,7 +8,7 @@ exports.conf = {
 
 exports.run = (client, msg) => {
   if (msg.author.bot) return;
-  const swearWords = ["damn", "shucks", "frak", "shiit"];
+  const swearWords = ["shucks", "frak", "shiit"];
 
   const badWords = swearWords.filter(word => msg.content.toLowerCase().includes(word));
   if (badWords.length > 0) {
