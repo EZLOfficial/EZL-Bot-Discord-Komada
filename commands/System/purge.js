@@ -8,7 +8,7 @@ exports.run = async (client, msg, [user = client.user, amount]) => {
 exports.conf = {
   enabled: true,
   runIn: ["text", "dm", "group"],
-  aliases: ['purge', 'clear', 'delete', 'd'],
+  aliases: ['purge', 'clear'],
   permLevel: 0,
   botPerms: ["MANAGE_MESSAGES"],
   requiredFuncs: [],
@@ -16,7 +16,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "delete",
+  name: "purge",
   description: "This will remove X amount of messages sent in a channel, or by Y user.",
   usage: "[user:mention] <amount:int{2,100}>",
   usageDelim: " ",
