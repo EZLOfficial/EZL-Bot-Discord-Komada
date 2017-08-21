@@ -4,6 +4,9 @@
   EZLBot
   <br>
   <a href="https://discord.gg/VHVY7rb" target="_blank"><img src="https://discordapp.com/api/guilds/233300409308020736/embed.png"></a>
+  [![Build Status](https://scrutinizer-ci.com/g/Skillz4Killz/EZLBot/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Skillz4Killz/EZLBot/build-status/master)
+  [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Skillz4Killz/EZLBot/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Skillz4Killz/EZLBot/?branch=master)
+  [![dependencies Status](https://david-dm.org/Skillz4Killz/EZLBot/status.svg)](https://david-dm.org/Skillz4Killz/EZLBot)
 </h1>
 
 # EZLBot
