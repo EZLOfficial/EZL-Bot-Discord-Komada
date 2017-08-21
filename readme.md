@@ -2,6 +2,8 @@
   <a href='https://discord.gg/VHVY7rb' style='border-radius: 50%'><img src='https://cdn.discordapp.com/attachments/282541228904546305/349282875251752961/Mobcrush.png' width='800px' height='300px'></a>
   <br>
   EZLBot
+  <br>
+  <a href="https://discord.gg/VHVY7rb" target="_blank"><img src="https://discordapp.com/api/guilds/233300409308020736/embed.png"></a>
 </h1>
 
 # EZLBot
