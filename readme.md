@@ -1,5 +1,5 @@
-<h1 align='center'>
-  <a href='https://discord.gg/VHVY7rb'><img src='https://cdn.discordapp.com/attachments/282541228904546305/349258881341456384/captains.jpg'>
+<h1 align='center' color= 'orange'>
+  <a href='https://discord.gg/VHVY7rb' width='250' height='250' style='border-radius: 50%'><img src='https://cdn.discordapp.com/attachments/282541228904546305/349258881341456384/captains.jpg'>
   <br>
   EZLBot
 </h1>
@@ -25,7 +25,7 @@ MIT
 
 # Contribution
 
-If anyone is interested in helping work on this together please let me know. I would love the help to create an awesome bot which can provide every discord feature and always remain open source and free. Contact me at [Discord](https://discord.me/EZLBot)
+If anyone is interested in helping work on this together please let me know. I would love the help to create an awesome bot which can provide every discord feature and always remain open source and free. Contact me at [Discord](https://discord.gg/VHVY7rb)
 
 # Contributor Covenant Code of Conduct
 
@@ -84,7 +84,7 @@ further defined and clarified by project maintainers.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the project team at [Discord](https://discord.gg/VHVY7rb). All
+reported by contacting @Skillz4Killz at [Discord](https://discord.gg/VHVY7rb). All
 complaints will be reviewed and investigated and will result in a response that
 is deemed necessary and appropriate to the circumstances. The project team is
 obligated to maintain confidentiality with regard to the reporter of an incident.
