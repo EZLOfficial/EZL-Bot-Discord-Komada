@@ -27,14 +27,14 @@ exports.run = async (client, msg) => {
    * Blank field, useful to create some space.
    */
       .addBlankField(true)
-      .addField('Inline Field 3', 'You can have a maximum of 25 fields.', true);
+      .addField('Inline Field 3', 'You can have a maximum of 25 fields.', true)
 
-    msg.channel.send({ embed });
+    msg.channel.send({ embed })
   } catch (e) {
-    msg.reply('Some error occured with xxxxxx. A report has been sent to the developers.');
-    client.channels.get('341020497309597696').send(`There was an error trying to xxxxxx: ${e} in ${msg.channel} on ${msg.guild} by ${msg.author}`);
+    msg.reply('Some error occured with xxxxxx. A report has been sent to the developers.')
+    client.channels.get('341020497309597696').send(`There was an error trying to xxxxxx: ${e} in ${msg.channel} on ${msg.guild} by ${msg.author}`)
   }
-};
+}
 
 exports.conf = {
   enabled: true,
@@ -43,13 +43,13 @@ exports.conf = {
   permLevel: 0,
   botPerms: [],
   requiredFuncs: [],
-  cooldown: 0,
-};
+  cooldown: 0
+}
 
 exports.help = {
   name: 'name',
   description: 'Command Description',
   usage: '',
   usageDelim: '',
-  extendedHelp: '',
-};
+  extendedHelp: ''
+}

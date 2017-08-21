@@ -1,56 +1,56 @@
-const yt = require("ytdl-core");
+const yt = require('ytdl-core')
 
 exports.run = async (client, msg) => {
   if (client.queue.has(msg.guild.id) === false) {
-    throw `Add some songs to the queue first with ${msg.guild.settings.prefix}add`;
+    throw `Add some songs to the queue first with ${msg.guild.settings.prefix}add`
   }
   if (!msg.guild.voiceConnection) {
-    await client.commands.get("join").run(client, msg);
-    return this.run(client, msg);
+    await client.commands.get('join').run(client, msg)
+    return this.run(client, msg)
   }
 
-  const handler = client.queue.get(msg.guild.id);
-  if (handler.playing) throw "Already Playing";
+  const handler = client.queue.get(msg.guild.id)
+  if (handler.playing) throw 'Already Playing'
   handler.playing = true;
 
-  (function play(song) {
+  (function play (song) {
     if (song === undefined) {
-      return msg.channel.send("⏹ Queue is empty").then(() => {
-        handler.playing = false;
-        return msg.member.voiceChannel.leave();
-      });
+      return msg.channel.send('⏹ Queue is empty').then(() => {
+        handler.playing = false
+        return msg.member.voiceChannel.leave()
+      })
     }
 
     msg.channel.send(`🎧 Playing: **${song.title}** as requested by: **${song.requester}**`)
-      .catch(err => client.emit("log", err, "error"));
+      .catch(err => client.emit('log', err, 'error'))
 
     return msg.guild.voiceConnection.playStream(yt(song.url, { audioonly: true }), { passes: 2 })
-      .on("end", () => {
-        handler.songs.shift();
-        play(handler.songs[0]);
+      .on('end', () => {
+        handler.songs.shift()
+        play(handler.songs[0])
       })
-      .on("error", err => msg.channel.send(`error: ${err}`).then(() => {
-        handler.songs.shift();
-        play(handler.songs[0]);
-      }));
-  }(handler.songs[0]));
+      .on('error', err => msg.channel.send(`error: ${err}`).then(() => {
+        handler.songs.shift()
+        play(handler.songs[0])
+      }))
+  }(handler.songs[0]))
 
-  return null;
-};
+  return null
+}
 
 exports.conf = {
   enabled: true,
-  runIn: ["text"],
+  runIn: ['text'],
   aliases: [],
   permLevel: 0,
   botPerms: [],
-  requiredFuncs: [],
-};
+  requiredFuncs: []
+}
 
 exports.help = {
-  name: "play",
-  description: "Plays the queue.",
-  usage: "",
-  usageDelim: "",
-  extendedHelp: "",
-};
+  name: 'play',
+  description: 'Plays the queue.',
+  usage: '',
+  usageDelim: '',
+  extendedHelp: ''
+}

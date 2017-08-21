@@ -1,6 +1,21 @@
 # EZLBot
 
-An open-source bot for all your multipurpose discord needs using Node.js, Discord.js, Komada.
+## What is it?
+
+An open-source bot for all your multipurpose discord needs using Node.js, Discord.js, Komada. It will grow into becoming the greatest esports bot ever.
+
+## Installation
+
+1. Invite the bot with this [link](https://discordapp.com/oauth2/authorize?client_id=334086035808190464&permissions=473967622&scope=bot)
+2. For private hosting: Clone the repo -> npm install -> node app.js
+
+## Documentation
+
+Pending
+
+## License
+
+MIT
 
 # Contribution
 
