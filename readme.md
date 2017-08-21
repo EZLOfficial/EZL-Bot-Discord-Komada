@@ -1,5 +1,5 @@
 <h1 align='center' color= 'orange'>
-  <a href='https://discord.gg/VHVY7rb' style='border-radius: 50%'><img src='https://cdn.discordapp.com/attachments/282541228904546305/349258881341456384/captains.jpg' width='125px' height='125px'></a>
+  <a href='https://discord.gg/VHVY7rb' style='border-radius: 50%'><img src='https://cdn.discordapp.com/attachments/282541228904546305/349282875251752961/Mobcrush.png' width='800px' height='300px'></a>
   <br>
   EZLBot
 </h1>
