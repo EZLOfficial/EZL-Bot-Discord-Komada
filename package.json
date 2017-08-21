@@ -27,7 +27,7 @@
   "dependencies": {
     "fast-html-parser": "^1.0.1",
     "fast-levenshtein": "^2.0.6",
-    "ffmpeg-binaries": "^3.2.2-3",
+    "ffmpeg-binaries": "^3.2.2",
     "figlet": "^1.2.0",
     "komada": "github:dirigeants/komada#master",
     "moment": "^2.18.1",
